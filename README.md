@@ -73,7 +73,7 @@ Lalu pada tab **Network** pastikan gRPC dan WebSocket sudah ON
 # Setting Host Marzban
  
  Saat masuk ke panel, setting host di menu kanan atas <br>
- ![image](https://github.com/cerdasbarus/ScriptVPS/assets/97426017/6b96bce7-39c7-4b5c-b01e-8dfdea91cb47) </br>
+ ![image](assets/268485705-3aeedf09-308e-41b0-9640-50e4abb77aa0.png) </br>
 
 Lalu ubah variabel {SERVER_IP} dibawah menjadi domain yang sudah di pointing tadi <br>
 # TROJAN WS
