@@ -18,7 +18,7 @@ Credit full to [Gozargah Marzban](https://github.com/Gozargah), saya hanya edit 
 - Pemahaman dasar perintah Linux
 
 # Sistem VM yang dapat digunakan
-- Debian 10 [**RECOMMENDED**]</br>
+- Debian 10 </br>
 - Debian 11 </br>
 - Ubuntu 18.04 </br>
 - Ubuntu 20.04 </br>
@@ -91,7 +91,6 @@ Jika anda berminat bisa join ke Telegram channel saya di :<a href="https://t.me/
 
 Ready VPN Xray-Core, mulai dari harga 5k saja <br>
 
-- Paket Reguler : https://forms.gle/V1tbqrAq2RkvWJMH7
-- Paket AON : https://forms.gle/SfM2tQ7ypV21weUw6
+- Paket Reguler : https://t.me/cerdascharo
 
 </br>
