@@ -8,6 +8,8 @@
     "servers": [
       "1.1.1.1",
       "1.0.0.1",
+      "8.8.8.8",
+      "8.8.4.4",
       "127.0.0.1"
     ],
     "tag": "dns-in"
@@ -23,12 +25,14 @@
         "outboundTag": "dns-out"
       },
       {
-        "type": "field",
-        "outboundTag": "block",
-        "ip": [
-          "geoip:cn",
-          "geoip:ru"
-        ]
+        "domain": [
+          "geosite:spotify",
+          "geosite:netflix",
+          "geosite:openai"
+        ],
+        "outboundTag": "WARP",
+        "network": "tcp,udp",
+        "type": "field"
       },
       {
         "type": "field",
@@ -114,13 +118,98 @@
       }
     },
     {
-      "tag": "SHADOWSOCKS_OUTLINE",
-      "listen": "0.0.0.0",
-      "port": 1080,
-      "protocol": "shadowsocks",
+      "tag": "TROJAN_GRPC",
+      "listen": "127.0.0.1",
+      "port": 4001,
+      "protocol": "trojan",
       "settings": {
         "clients": [],
-        "network": "tcp,udp"
+        "decryption": "none",
+        "fallbacks": [
+          {
+            "dest": 8081
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "trojan-service",
+          "acceptProxyProtocol": true,
+          "multiMode": true
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    },
+    {
+      "tag": "VMESS_GRPC",
+      "listen": "127.0.0.1",
+      "port": 4002,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [],
+        "decryption": "none",
+        "fallbacks": [
+          {
+            "dest": 8081
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "none",
+        "grpcSettings": {
+          "acceptProxyProtocol": true,
+          "serviceName": "vmess-service",
+          "multiMode": true
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    },
+    {
+      "tag": "VLESS_GRPC",
+      "listen": "127.0.0.1",
+      "port": 4003,
+      "protocol": "vless",
+      "settings": {
+        "clients": [],
+        "decryption": "none",
+        "fallbacks": [
+          {
+            "dest": 8081
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "none",
+        "grpcSettings": {
+          "acceptProxyProtocol": true,
+          "serviceName": "vless-service",
+          "multiMode": true
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
       }
     }
   ],
@@ -143,6 +232,18 @@
         "nonIPQuery": "skip"
       },
       "tag": "dns-out"
+    },
+    {
+      "tag": "WARP",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "127.0.0.1",
+            "port": 40000
+          }
+        ]
+      }
     }
   ],
   "policy": {
