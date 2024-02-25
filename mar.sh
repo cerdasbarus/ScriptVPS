@@ -6,6 +6,9 @@ read -rp "Masukkan Domain: " domain
 echo "$domain" > /root/domain
 domain=$(cat /root/domain)
 
+#email
+read -rp "Masukkan Email anda: " email
+
 #Preparation
 clear
 cd;
@@ -52,6 +55,9 @@ timedatectl set-timezone Asia/Jakarta;
 
 #Install Marzban
 sudo bash -c "$(curl -sL https://github.com/GawrAme/Marzban-scripts/raw/master/marzban.sh)" @ install
+
+#Install Subs
+wget -N -P /var/lib/marzban/templates/subscription/  https://raw.githubusercontent.com/GawrAme/MarLing/main/index.html
 
 #install env
 wget -O /opt/marzban/.env "https://raw.githubusercontent.com/GawrAme/MarLing/main/env"
@@ -104,8 +110,8 @@ apt install socat cron bash-completion -y
 
 #install cert
 systemctl stop nginx
-curl https://get.acme.sh | sh -s email=akunpispon2@gmail.com
-/root/.acme.sh/acme.sh --server letsencrypt --register-account -m akunpispon2@gmail.com --issue -d $domain --standalone -k ec-256
+curl https://get.acme.sh | sh -s email=$email
+/root/.acme.sh/acme.sh --server letsencrypt --register-account -m $email --issue -d $domain --standalone -k ec-256
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /var/lib/marzban/xray.crt --keypath /var/lib/marzban/xray.key --ecc
 systemctl start nginx
 wget -O /var/lib/marzban/xray_config.json "https://raw.githubusercontent.com/GawrAme/MarLing/main/xray_config.json"
@@ -126,8 +132,17 @@ yes | sudo ufw enable
 #install database
 wget -O /var/lib/marzban/db.sqlite3 "https://github.com/GawrAme/MarLing/raw/main/db.sqlite3"
 
+#install WARP Proxy
+wget -O /root/warp "https://raw.githubusercontent.com/hamid-gh98/x-ui-scripts/main/install_warp_proxy.sh"
+sudo chmod +x /root/warp
+sudo bash /root/warp -y 
+
 #finishing
 apt autoremove -y
 apt clean
-marzban restart
+systemctl restart nginx
+cd /opt/marzban
+docker compose down && docker compose up -d
+cd
 rm /root/mar.sh
+
