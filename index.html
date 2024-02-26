@@ -7,7 +7,7 @@
     <title>{{ user.username }} - Sub Info</title>
     <style>
         .asli {
-            background: url('https://4kwallpapers.com/images/walls/thumbs_3t/11574.jpeg') no-repeat;
+            background: url('https://github.com/cerdasbarus/ScriptVPS/blob/fa4d6c86034d4136c2acb2b474288c7a1be73a0f/assets/sasuke.jpg') no-repeat;
             background-position: center;
             background-size: cover;
         }
@@ -3478,15 +3478,15 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         Alpine.start();
     </script>
     <script defer>
-        const dataLimit = "{% if not user.data_limit %}∞{% else %}{{ user.data_limit }}{% endif %}";
+        const dataLimit = "{% if not user.data_limit %}âˆž{% else %}{{ user.data_limit }}{% endif %}";
         const dataUsed = "{{ user.used_traffic }}";
-        const expireDateInit = "{% if not user.expire %}∞{% else %}{% set current_timestamp = now().timestamp() %}{{ user.expire | datetime }}{% endif %}";
+        const expireDateInit = "{% if not user.expire %}âˆž{% else %}{% set current_timestamp = now().timestamp() %}{{ user.expire | datetime }}{% endif %}";
         var tmpUsage = ((parseFloat(dataUsed) / parseFloat(dataLimit)) * 100).toFixed(2);
         if (tmpUsage > 100) tmpUsage = 100;
-        const dataUsage = dataLimit == "∞" ? 100 : tmpUsage;
+        const dataUsage = dataLimit == "âˆž" ? 100 : tmpUsage;
         const dataChartColor = dataUsage < 40 ? "bg-green-500" : dataUsage < 80 ? "bg-yellow-600" : "bg-red-500";
         const resetInterval = "{{ user.data_limit_reset_strategy.value }}";
-        let expireDateVar = expireDateInit.includes("∞") ? "∞" : localStorage.getItem("lang") == "fa" ? new Date(expireDateInit).toLocaleString("fa-IR-u-nu-latn").replace(",", " ") : expireDateInit;
+        let expireDateVar = expireDateInit.includes("âˆž") ? "âˆž" : localStorage.getItem("lang") == "fa" ? new Date(expireDateInit).toLocaleString("fa-IR-u-nu-latn").replace(",", " ") : expireDateInit;
         let appsJson = {
             IOS: {
                 Streisand: {
@@ -3669,43 +3669,43 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 supTelInfo: "If there are any problems with subscription, please contact support on Telegram."
             },
             fa: {
-                active: "فعال",
-                limited: "تمام شده",
-                expired: "پایان یافته",
-                disabled: "غیرفعال",
-                dataUsage: "میزان استفاده: ",
-                expirationDate: "تاریخ پایان اشتراک: ",
-                resetIntervalDay: "(ریست روزانه)",
-                resetIntervalWeek: "(ریست هفتگی)",
-                resetIntervalMonth: "(ریست ماهانه)",
-                resetIntervalYear: "(ریست سالانه)",
-                remainingDays: "روزهای باقی‌مانده: ",
-                remainingDaysSufix: " روز",
-                links: "لینک‌ها",
-                apps: "دانلود برنامه‌ها",
-                Android: "اندروید",
-                iOS: "آی او اِس",
-                Windows: "ویندوز",
-                macOS: "مک او اِس",
-                tutorials: "آموزش‌ها",
-                subscription: "لینک اشتراک",
-                language: "زبان",
-                settings: "تنظیمات",
-                darkMode: "تم تیره",
-                copyAll: "کپی همه",
-                proxy: "پروکسی",
-                tutorial: "آموزش",
-                download: "دانلود",
-                telchannel: "کانال تلگرام",
-                telProxy: "پروکسی تلگرام",
-                telsupport: "پشتیبانی تلگرام",
-                v2rayNG: "اندروید - دانلود برنامه v2rayNG",
-                NekoBox: "اندروید - دانلود برنامه NekoBox",
-                SingBox: "اندروید - دانلود برنامه Sing-Box",
-                Streisand: "آی او اِس - دانلود برنامه Streisand",
-                FoXray: "آی او اِس - دانلود برنامه FoXray",
-                V2Box: "آی او اِس - دانلود برنامه v2Box",
-                addto: "نصب با یک کلیک",
+                active: "ÙØ¹Ø§Ù„",
+                limited: "ØªÙ…Ø§Ù… Ø´Ø¯Ù‡",
+                expired: "Ù¾Ø§ÛŒØ§Ù† ÛŒØ§ÙØªÙ‡",
+                disabled: "ØºÛŒØ±ÙØ¹Ø§Ù„",
+                dataUsage: "Ù…ÛŒØ²Ø§Ù† Ø§Ø³ØªÙØ§Ø¯Ù‡: ",
+                expirationDate: "ØªØ§Ø±ÛŒØ® Ù¾Ø§ÛŒØ§Ù† Ø§Ø´ØªØ±Ø§Ú©: ",
+                resetIntervalDay: "(Ø±ÛŒØ³Øª Ø±ÙˆØ²Ø§Ù†Ù‡)",
+                resetIntervalWeek: "(Ø±ÛŒØ³Øª Ù‡ÙØªÚ¯ÛŒ)",
+                resetIntervalMonth: "(Ø±ÛŒØ³Øª Ù…Ø§Ù‡Ø§Ù†Ù‡)",
+                resetIntervalYear: "(Ø±ÛŒØ³Øª Ø³Ø§Ù„Ø§Ù†Ù‡)",
+                remainingDays: "Ø±ÙˆØ²Ù‡Ø§ÛŒ Ø¨Ø§Ù‚ÛŒâ€ŒÙ…Ø§Ù†Ø¯Ù‡: ",
+                remainingDaysSufix: " Ø±ÙˆØ²",
+                links: "Ù„ÛŒÙ†Ú©â€ŒÙ‡Ø§",
+                apps: "Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø¨Ø±Ù†Ø§Ù…Ù‡â€ŒÙ‡Ø§",
+                Android: "Ø§Ù†Ø¯Ø±ÙˆÛŒØ¯",
+                iOS: "Ø¢ÛŒ Ø§Ùˆ Ø§ÙØ³",
+                Windows: "ÙˆÛŒÙ†Ø¯ÙˆØ²",
+                macOS: "Ù…Ú© Ø§Ùˆ Ø§ÙØ³",
+                tutorials: "Ø¢Ù…ÙˆØ²Ø´â€ŒÙ‡Ø§",
+                subscription: "Ù„ÛŒÙ†Ú© Ø§Ø´ØªØ±Ø§Ú©",
+                language: "Ø²Ø¨Ø§Ù†",
+                settings: "ØªÙ†Ø¸ÛŒÙ…Ø§Øª",
+                darkMode: "ØªÙ… ØªÛŒØ±Ù‡",
+                copyAll: "Ú©Ù¾ÛŒ Ù‡Ù…Ù‡",
+                proxy: "Ù¾Ø±ÙˆÚ©Ø³ÛŒ",
+                tutorial: "Ø¢Ù…ÙˆØ²Ø´",
+                download: "Ø¯Ø§Ù†Ù„ÙˆØ¯",
+                telchannel: "Ú©Ø§Ù†Ø§Ù„ ØªÙ„Ú¯Ø±Ø§Ù…",
+                telProxy: "Ù¾Ø±ÙˆÚ©Ø³ÛŒ ØªÙ„Ú¯Ø±Ø§Ù…",
+                telsupport: "Ù¾Ø´ØªÛŒØ¨Ø§Ù†ÛŒ ØªÙ„Ú¯Ø±Ø§Ù…",
+                v2rayNG: "Ø§Ù†Ø¯Ø±ÙˆÛŒØ¯ - Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø¨Ø±Ù†Ø§Ù…Ù‡ v2rayNG",
+                NekoBox: "Ø§Ù†Ø¯Ø±ÙˆÛŒØ¯ - Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø¨Ø±Ù†Ø§Ù…Ù‡ NekoBox",
+                SingBox: "Ø§Ù†Ø¯Ø±ÙˆÛŒØ¯ - Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø¨Ø±Ù†Ø§Ù…Ù‡ Sing-Box",
+                Streisand: "Ø¢ÛŒ Ø§Ùˆ Ø§ÙØ³ - Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø¨Ø±Ù†Ø§Ù…Ù‡ Streisand",
+                FoXray: "Ø¢ÛŒ Ø§Ùˆ Ø§ÙØ³ - Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø¨Ø±Ù†Ø§Ù…Ù‡ FoXray",
+                V2Box: "Ø¢ÛŒ Ø§Ùˆ Ø§ÙØ³ - Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø¨Ø±Ù†Ø§Ù…Ù‡ v2Box",
+                addto: "Ù†ØµØ¨ Ø¨Ø§ ÛŒÚ© Ú©Ù„ÛŒÚ©",
                 addV2rayNG: "v2rayNG",
                 addStreisand: "Streisand",
                 addFoXray: "FoXray",
@@ -3719,75 +3719,75 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 addClashMeta: "Clash Meta",
                 addClashVerge: "Clash Verge",
                 addClashX: "Clash X",
-                install: "برای دانلود برنامه مورد نظر نسبت به سیستم عامل خودتون روی لینک دانلود کلیک کنید!",
-                support: "پشتیبانی",
-                oneClick: "برای نصب سریع برنامه مورد نظر رو انتخاب کنید.",
-                restofusage: "میزان استفاده",
-                needediOS: "سیستم عامل مورد نیاز: ",
-                clickForDownload: "برای دانلود کردن برنامه روی لینک زیر کلیک کنید",
-                clickForAdd: "برای اضافه کردن کانفیگ‌ ها داخل برنامه روی لینک زیر کلیک کنید.",
-                copyLink: "کپی کردن",
-                qrCode: "کیوآرکد",
-                downloadApp: "دانلود برنامه",
-                addConfigs: "افزودن کانفیگ ها",
-                AddtoApp: "افزودن به برنامه",
-                myConfigs: "کانفیگ های من",
-                copyAllCfgs: "کپی کردن همه کانفیگ ها",
-                copied: "کپی شد",
-                clickOutClose: "برای بسته شدن بیرون از باکس کلیک کنید",
-                chooseApp: "برنامه مورد نظر خود را انتخاب کنید",
-                routingTitle: "مسیریابی - پیشنهادی",
-                routingInfo: "با اضافه کردن مسیریابی, وب سایت ها و برنامه های داخلی از VPN عبور داده نمیشود",
-                routingIR: "افزودن سرویس ایران",
-                routingRU: "افزودن سرویس روسیه",
-                myiOS: "سیستم عامل من",
-                v2rayNGs3: "بروزرسانی اشتراک",
-                v2rayNGs3Info: "پس از مرحله دوم، باید یک بار اشتراک خود را به روز کنید. دو تصویر شما را راهنمایی می کند.",
-                howToConnect: "چطوری وصل بشم؟",
-                connectInfo: "با استفاده از منو های زیر نسبت به سیستم عامل خود می توانید از اشتراک خود استفاده کنید.",
-                macInfo: "نکته: اتصال در مک مشابه آی او اِس است",
-                generalAccess: "دسترسی کلی",
-                generalAccessInfo: "در این بخش، شما به کانفیگ های خود به طور جداگانه دسترسی دارید که به شما امکان می دهد هر یک از آنها را از طریق کد QR به اشتراک بگذارید یا می توانید به سادگی آنها را کپی کنید.",
-                supTelInfo: "در صورت وجود هرگونه مشکل در اشتراک, با پشیتبانی تلگرام در ارتباط باشید."
+                install: "Ø¨Ø±Ø§ÛŒ Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø¨Ø±Ù†Ø§Ù…Ù‡ Ù…ÙˆØ±Ø¯ Ù†Ø¸Ø± Ù†Ø³Ø¨Øª Ø¨Ù‡ Ø³ÛŒØ³ØªÙ… Ø¹Ø§Ù…Ù„ Ø®ÙˆØ¯ØªÙˆÙ† Ø±ÙˆÛŒ Ù„ÛŒÙ†Ú© Ø¯Ø§Ù†Ù„ÙˆØ¯ Ú©Ù„ÛŒÚ© Ú©Ù†ÛŒØ¯!",
+                support: "Ù¾Ø´ØªÛŒØ¨Ø§Ù†ÛŒ",
+                oneClick: "Ø¨Ø±Ø§ÛŒ Ù†ØµØ¨ Ø³Ø±ÛŒØ¹ Ø¨Ø±Ù†Ø§Ù…Ù‡ Ù…ÙˆØ±Ø¯ Ù†Ø¸Ø± Ø±Ùˆ Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÛŒØ¯.",
+                restofusage: "Ù…ÛŒØ²Ø§Ù† Ø§Ø³ØªÙØ§Ø¯Ù‡",
+                needediOS: "Ø³ÛŒØ³ØªÙ… Ø¹Ø§Ù…Ù„ Ù…ÙˆØ±Ø¯ Ù†ÛŒØ§Ø²: ",
+                clickForDownload: "Ø¨Ø±Ø§ÛŒ Ø¯Ø§Ù†Ù„ÙˆØ¯ Ú©Ø±Ø¯Ù† Ø¨Ø±Ù†Ø§Ù…Ù‡ Ø±ÙˆÛŒ Ù„ÛŒÙ†Ú© Ø²ÛŒØ± Ú©Ù„ÛŒÚ© Ú©Ù†ÛŒØ¯",
+                clickForAdd: "Ø¨Ø±Ø§ÛŒ Ø§Ø¶Ø§ÙÙ‡ Ú©Ø±Ø¯Ù† Ú©Ø§Ù†ÙÛŒÚ¯â€Œ Ù‡Ø§ Ø¯Ø§Ø®Ù„ Ø¨Ø±Ù†Ø§Ù…Ù‡ Ø±ÙˆÛŒ Ù„ÛŒÙ†Ú© Ø²ÛŒØ± Ú©Ù„ÛŒÚ© Ú©Ù†ÛŒØ¯.",
+                copyLink: "Ú©Ù¾ÛŒ Ú©Ø±Ø¯Ù†",
+                qrCode: "Ú©ÛŒÙˆØ¢Ø±Ú©Ø¯",
+                downloadApp: "Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø¨Ø±Ù†Ø§Ù…Ù‡",
+                addConfigs: "Ø§ÙØ²ÙˆØ¯Ù† Ú©Ø§Ù†ÙÛŒÚ¯ Ù‡Ø§",
+                AddtoApp: "Ø§ÙØ²ÙˆØ¯Ù† Ø¨Ù‡ Ø¨Ø±Ù†Ø§Ù…Ù‡",
+                myConfigs: "Ú©Ø§Ù†ÙÛŒÚ¯ Ù‡Ø§ÛŒ Ù…Ù†",
+                copyAllCfgs: "Ú©Ù¾ÛŒ Ú©Ø±Ø¯Ù† Ù‡Ù…Ù‡ Ú©Ø§Ù†ÙÛŒÚ¯ Ù‡Ø§",
+                copied: "Ú©Ù¾ÛŒ Ø´Ø¯",
+                clickOutClose: "Ø¨Ø±Ø§ÛŒ Ø¨Ø³ØªÙ‡ Ø´Ø¯Ù† Ø¨ÛŒØ±ÙˆÙ† Ø§Ø² Ø¨Ø§Ú©Ø³ Ú©Ù„ÛŒÚ© Ú©Ù†ÛŒØ¯",
+                chooseApp: "Ø¨Ø±Ù†Ø§Ù…Ù‡ Ù…ÙˆØ±Ø¯ Ù†Ø¸Ø± Ø®ÙˆØ¯ Ø±Ø§ Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÛŒØ¯",
+                routingTitle: "Ù…Ø³ÛŒØ±ÛŒØ§Ø¨ÛŒ - Ù¾ÛŒØ´Ù†Ù‡Ø§Ø¯ÛŒ",
+                routingInfo: "Ø¨Ø§ Ø§Ø¶Ø§ÙÙ‡ Ú©Ø±Ø¯Ù† Ù…Ø³ÛŒØ±ÛŒØ§Ø¨ÛŒ, ÙˆØ¨ Ø³Ø§ÛŒØª Ù‡Ø§ Ùˆ Ø¨Ø±Ù†Ø§Ù…Ù‡ Ù‡Ø§ÛŒ Ø¯Ø§Ø®Ù„ÛŒ Ø§Ø² VPN Ø¹Ø¨ÙˆØ± Ø¯Ø§Ø¯Ù‡ Ù†Ù…ÛŒØ´ÙˆØ¯",
+                routingIR: "Ø§ÙØ²ÙˆØ¯Ù† Ø³Ø±ÙˆÛŒØ³ Ø§ÛŒØ±Ø§Ù†",
+                routingRU: "Ø§ÙØ²ÙˆØ¯Ù† Ø³Ø±ÙˆÛŒØ³ Ø±ÙˆØ³ÛŒÙ‡",
+                myiOS: "Ø³ÛŒØ³ØªÙ… Ø¹Ø§Ù…Ù„ Ù…Ù†",
+                v2rayNGs3: "Ø¨Ø±ÙˆØ²Ø±Ø³Ø§Ù†ÛŒ Ø§Ø´ØªØ±Ø§Ú©",
+                v2rayNGs3Info: "Ù¾Ø³ Ø§Ø² Ù…Ø±Ø­Ù„Ù‡ Ø¯ÙˆÙ…ØŒ Ø¨Ø§ÛŒØ¯ ÛŒÚ© Ø¨Ø§Ø± Ø§Ø´ØªØ±Ø§Ú© Ø®ÙˆØ¯ Ø±Ø§ Ø¨Ù‡ Ø±ÙˆØ² Ú©Ù†ÛŒØ¯. Ø¯Ùˆ ØªØµÙˆÛŒØ± Ø´Ù…Ø§ Ø±Ø§ Ø±Ø§Ù‡Ù†Ù…Ø§ÛŒÛŒ Ù…ÛŒ Ú©Ù†Ø¯.",
+                howToConnect: "Ú†Ø·ÙˆØ±ÛŒ ÙˆØµÙ„ Ø¨Ø´Ù…ØŸ",
+                connectInfo: "Ø¨Ø§ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ø§Ø² Ù…Ù†Ùˆ Ù‡Ø§ÛŒ Ø²ÛŒØ± Ù†Ø³Ø¨Øª Ø¨Ù‡ Ø³ÛŒØ³ØªÙ… Ø¹Ø§Ù…Ù„ Ø®ÙˆØ¯ Ù…ÛŒ ØªÙˆØ§Ù†ÛŒØ¯ Ø§Ø² Ø§Ø´ØªØ±Ø§Ú© Ø®ÙˆØ¯ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ú©Ù†ÛŒØ¯.",
+                macInfo: "Ù†Ú©ØªÙ‡: Ø§ØªØµØ§Ù„ Ø¯Ø± Ù…Ú© Ù…Ø´Ø§Ø¨Ù‡ Ø¢ÛŒ Ø§Ùˆ Ø§ÙØ³ Ø§Ø³Øª",
+                generalAccess: "Ø¯Ø³ØªØ±Ø³ÛŒ Ú©Ù„ÛŒ",
+                generalAccessInfo: "Ø¯Ø± Ø§ÛŒÙ† Ø¨Ø®Ø´ØŒ Ø´Ù…Ø§ Ø¨Ù‡ Ú©Ø§Ù†ÙÛŒÚ¯ Ù‡Ø§ÛŒ Ø®ÙˆØ¯ Ø¨Ù‡ Ø·ÙˆØ± Ø¬Ø¯Ø§Ú¯Ø§Ù†Ù‡ Ø¯Ø³ØªØ±Ø³ÛŒ Ø¯Ø§Ø±ÛŒØ¯ Ú©Ù‡ Ø¨Ù‡ Ø´Ù…Ø§ Ø§Ù…Ú©Ø§Ù† Ù…ÛŒ Ø¯Ù‡Ø¯ Ù‡Ø± ÛŒÚ© Ø§Ø² Ø¢Ù†Ù‡Ø§ Ø±Ø§ Ø§Ø² Ø·Ø±ÛŒÙ‚ Ú©Ø¯ QR Ø¨Ù‡ Ø§Ø´ØªØ±Ø§Ú© Ø¨Ú¯Ø°Ø§Ø±ÛŒØ¯ ÛŒØ§ Ù…ÛŒ ØªÙˆØ§Ù†ÛŒØ¯ Ø¨Ù‡ Ø³Ø§Ø¯Ú¯ÛŒ Ø¢Ù†Ù‡Ø§ Ø±Ø§ Ú©Ù¾ÛŒ Ú©Ù†ÛŒØ¯.",
+                supTelInfo: "Ø¯Ø± ØµÙˆØ±Øª ÙˆØ¬ÙˆØ¯ Ù‡Ø±Ú¯ÙˆÙ†Ù‡ Ù…Ø´Ú©Ù„ Ø¯Ø± Ø§Ø´ØªØ±Ø§Ú©, Ø¨Ø§ Ù¾Ø´ÛŒØªØ¨Ø§Ù†ÛŒ ØªÙ„Ú¯Ø±Ø§Ù… Ø¯Ø± Ø§Ø±ØªØ¨Ø§Ø· Ø¨Ø§Ø´ÛŒØ¯."
             },
             ru: {
-                active: "Активен",
-                limited: "Ограничен",
-                expired: "Просрочен",
-                disabled: "Отключен",
-                dataUsage: "Использовано данных: ",
-                expirationDate: "Дата окончания срока: ",
-                resetIntervalDay: "(сбрасывает каждый день)",
-                resetIntervalWeek: "(сбрасывается каждую неделю)",
-                resetIntervalMonth: "(сбрасывается каждый месяц)",
-                resetIntervalYear: "(сбрасывается каждый год)",
-                remainingDays: "Оставшиеся дни: ",
-                remainingDaysSufix: " дней",
-                links: "ссылки",
-                apps: "Скачать программы",
+                active: "ÐÐºÑ‚Ð¸Ð²ÐµÐ½",
+                limited: "ÐžÐ³Ñ€Ð°Ð½Ð¸Ñ‡ÐµÐ½",
+                expired: "ÐŸÑ€Ð¾ÑÑ€Ð¾Ñ‡ÐµÐ½",
+                disabled: "ÐžÑ‚ÐºÐ»ÑŽÑ‡ÐµÐ½",
+                dataUsage: "Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¾ Ð´Ð°Ð½Ð½Ñ‹Ñ…: ",
+                expirationDate: "Ð”Ð°Ñ‚Ð° Ð¾ÐºÐ¾Ð½Ñ‡Ð°Ð½Ð¸Ñ ÑÑ€Ð¾ÐºÐ°: ",
+                resetIntervalDay: "(ÑÐ±Ñ€Ð°ÑÑ‹Ð²Ð°ÐµÑ‚ ÐºÐ°Ð¶Ð´Ñ‹Ð¹ Ð´ÐµÐ½ÑŒ)",
+                resetIntervalWeek: "(ÑÐ±Ñ€Ð°ÑÑ‹Ð²Ð°ÐµÑ‚ÑÑ ÐºÐ°Ð¶Ð´ÑƒÑŽ Ð½ÐµÐ´ÐµÐ»ÑŽ)",
+                resetIntervalMonth: "(ÑÐ±Ñ€Ð°ÑÑ‹Ð²Ð°ÐµÑ‚ÑÑ ÐºÐ°Ð¶Ð´Ñ‹Ð¹ Ð¼ÐµÑÑÑ†)",
+                resetIntervalYear: "(ÑÐ±Ñ€Ð°ÑÑ‹Ð²Ð°ÐµÑ‚ÑÑ ÐºÐ°Ð¶Ð´Ñ‹Ð¹ Ð³Ð¾Ð´)",
+                remainingDays: "ÐžÑÑ‚Ð°Ð²ÑˆÐ¸ÐµÑÑ Ð´Ð½Ð¸: ",
+                remainingDaysSufix: " Ð´Ð½ÐµÐ¹",
+                links: "ÑÑÑ‹Ð»ÐºÐ¸",
+                apps: "Ð¡ÐºÐ°Ñ‡Ð°Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹",
                 Android: "Android",
                 iOS: "iOS",
                 Windows: "Windows",
                 macOS: "macOS",
-                tutorials: "учебники",
-                subscription: "подписка",
-                language: "язык",
-                settings: "настройки",
-                darkMode: "тёмный режим",
-                copyAll: "скопировать все",
-                proxy: "прокси",
-                tutorial: "руководство",
-                download: "Скачать",
-                telchannel: "Телеграм-канал",
-                telsupport: "Поддержка Telegram",
-                telProxy: "Прокси-сервер Telegram",
+                tutorials: "ÑƒÑ‡ÐµÐ±Ð½Ð¸ÐºÐ¸",
+                subscription: "Ð¿Ð¾Ð´Ð¿Ð¸ÑÐºÐ°",
+                language: "ÑÐ·Ñ‹Ðº",
+                settings: "Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸",
+                darkMode: "Ñ‚Ñ‘Ð¼Ð½Ñ‹Ð¹ Ñ€ÐµÐ¶Ð¸Ð¼",
+                copyAll: "ÑÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ð²ÑÐµ",
+                proxy: "Ð¿Ñ€Ð¾ÐºÑÐ¸",
+                tutorial: "Ñ€ÑƒÐºÐ¾Ð²Ð¾Ð´ÑÑ‚Ð²Ð¾",
+                download: "Ð¡ÐºÐ°Ñ‡Ð°Ñ‚ÑŒ",
+                telchannel: "Ð¢ÐµÐ»ÐµÐ³Ñ€Ð°Ð¼-ÐºÐ°Ð½Ð°Ð»",
+                telsupport: "ÐŸÐ¾Ð´Ð´ÐµÑ€Ð¶ÐºÐ° Telegram",
+                telProxy: "ÐŸÑ€Ð¾ÐºÑÐ¸-ÑÐµÑ€Ð²ÐµÑ€ Telegram",
                 v2rayNG: "Android - Download v2rayNG",
                 NekoBox: "Android - Download NekoBox",
                 SingBox: "Android - Download SingBox",
                 Streisand: "iOS - Download Streisand",
                 FoXray: "iOS - Downaload FoXray",
                 V2Box: "iOS - Download v2Box",
-                addto: "Быстрая настройка",
+                addto: "Ð‘Ñ‹ÑÑ‚Ñ€Ð°Ñ Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ°",
                 addV2rayNG: "v2rayNG",
                 addStreisand: "Streisand",
                 addFoXray: "FoXray",
@@ -3801,36 +3801,36 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 addClashMeta: "Clash Meta",
                 addClashVerge: "Clash Verge",
                 addClashX: "Clash X",
-                install: "Нажмите на следующие кнопки, чтобы загрузить программу для вашей операционной системы!",
-                support: "Поддержка",
-                oneClick: "Для быстрой установки конфига, выберите приложение, которое вы используете!",
-                restofusage: "Использовано данных",
-                needediOS: "Нужна версия iOS: ",
-                clickForDownload: "Нажмите на ссылку ниже, чтобы загрузить программу",
-                clickForAdd: "Нажмите на ссылку ниже, чтобы добавить конфигурации в программу",
-                copyLink: "Копировать",
+                install: "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð½Ð° ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ ÐºÐ½Ð¾Ð¿ÐºÐ¸, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð·Ð°Ð³Ñ€ÑƒÐ·Ð¸Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ Ð´Ð»Ñ Ð²Ð°ÑˆÐµÐ¹ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¾Ð½Ð½Ð¾Ð¹ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹!",
+                support: "ÐŸÐ¾Ð´Ð´ÐµÑ€Ð¶ÐºÐ°",
+                oneClick: "Ð”Ð»Ñ Ð±Ñ‹ÑÑ‚Ñ€Ð¾Ð¹ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ¸ ÐºÐ¾Ð½Ñ„Ð¸Ð³Ð°, Ð²Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ Ð²Ñ‹ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÑ‚Ðµ!",
+                restofusage: "Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¾ Ð´Ð°Ð½Ð½Ñ‹Ñ…",
+                needediOS: "ÐÑƒÐ¶Ð½Ð° Ð²ÐµÑ€ÑÐ¸Ñ iOS: ",
+                clickForDownload: "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð½Ð° ÑÑÑ‹Ð»ÐºÑƒ Ð½Ð¸Ð¶Ðµ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð·Ð°Ð³Ñ€ÑƒÐ·Ð¸Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ",
+                clickForAdd: "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð½Ð° ÑÑÑ‹Ð»ÐºÑƒ Ð½Ð¸Ð¶Ðµ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÐºÐ¾Ð½Ñ„Ð¸Ð³ÑƒÑ€Ð°Ñ†Ð¸Ð¸ Ð² Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ",
+                copyLink: "ÐšÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ",
                 qrCode: "QrCode",
-                downloadApp: "Скачайте программу",
-                addConfigs: "Добавьте конфиги",
-                AddtoApp: "Добавить в приложение",
-                myConfigs: "Мои конфиги",
-                copyAllCfgs: "Скопировать все конфиги",
-                copied: "Скопировано",
-                clickOutClose: "Нажмите за пределами окна, чтобы закрыть.",
-                chooseApp: "Выберите нужную вам программу",
-                routingTitle: "Роутинг — рекоммендуется",
-                routingInfo: "При добавлении роутинга, сайты внутри страны будут открываться без VPN",
-                routingIR: "Добавить Иранские сайты",
-                routingRU: "Добавить Российские сайты",
-                myiOS: 'Моя версия IOS: ',
-                v2rayNGs3: "Обновите подписку",
-                v2rayNGs3Info: "После второго шага необходимо один раз обновить подписку. Ниже приведены два изображения, которые помогут вам в этом.",
-                howToConnect: "Как подключиться?",
-                connectInfo: "Воспользоваться подпиской можно через следующее меню для нужной операционной системы",
-                macInfo: "Примечание: подключение на Mac OS аналогично IOS",
-                generalAccess: "Общий доступ",
-                generalAccessInfo: "В этом разделе вы получаете доступ к своим конфигурациям по отдельности, что позволяет делиться каждой из них с помощью QR-кода или просто копировать их.",
-                supTelInfo: "Если возникнут проблемы, обратитесь в службу поддержки в Telegram"
+                downloadApp: "Ð¡ÐºÐ°Ñ‡Ð°Ð¹Ñ‚Ðµ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ",
+                addConfigs: "Ð”Ð¾Ð±Ð°Ð²ÑŒÑ‚Ðµ ÐºÐ¾Ð½Ñ„Ð¸Ð³Ð¸",
+                AddtoApp: "Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð² Ð¿Ñ€Ð¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ",
+                myConfigs: "ÐœÐ¾Ð¸ ÐºÐ¾Ð½Ñ„Ð¸Ð³Ð¸",
+                copyAllCfgs: "Ð¡ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ð²ÑÐµ ÐºÐ¾Ð½Ñ„Ð¸Ð³Ð¸",
+                copied: "Ð¡ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¾",
+                clickOutClose: "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð·Ð° Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ð¼Ð¸ Ð¾ÐºÐ½Ð°, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð·Ð°ÐºÑ€Ñ‹Ñ‚ÑŒ.",
+                chooseApp: "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð½ÑƒÐ¶Ð½ÑƒÑŽ Ð²Ð°Ð¼ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ",
+                routingTitle: "Ð Ð¾ÑƒÑ‚Ð¸Ð½Ð³ â€” Ñ€ÐµÐºÐ¾Ð¼Ð¼ÐµÐ½Ð´ÑƒÐµÑ‚ÑÑ",
+                routingInfo: "ÐŸÑ€Ð¸ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ð¸ Ñ€Ð¾ÑƒÑ‚Ð¸Ð½Ð³Ð°, ÑÐ°Ð¹Ñ‚Ñ‹ Ð²Ð½ÑƒÑ‚Ñ€Ð¸ ÑÑ‚Ñ€Ð°Ð½Ñ‹ Ð±ÑƒÐ´ÑƒÑ‚ Ð¾Ñ‚ÐºÑ€Ñ‹Ð²Ð°Ñ‚ÑŒÑÑ Ð±ÐµÐ· VPN",
+                routingIR: "Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð˜Ñ€Ð°Ð½ÑÐºÐ¸Ðµ ÑÐ°Ð¹Ñ‚Ñ‹",
+                routingRU: "Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð Ð¾ÑÑÐ¸Ð¹ÑÐºÐ¸Ðµ ÑÐ°Ð¹Ñ‚Ñ‹",
+                myiOS: 'ÐœÐ¾Ñ Ð²ÐµÑ€ÑÐ¸Ñ IOS: ',
+                v2rayNGs3: "ÐžÐ±Ð½Ð¾Ð²Ð¸Ñ‚Ðµ Ð¿Ð¾Ð´Ð¿Ð¸ÑÐºÑƒ",
+                v2rayNGs3Info: "ÐŸÐ¾ÑÐ»Ðµ Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ ÑˆÐ°Ð³Ð° Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð¾Ð´Ð¸Ð½ Ñ€Ð°Ð· Ð¾Ð±Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð¿Ð¾Ð´Ð¿Ð¸ÑÐºÑƒ. ÐÐ¸Ð¶Ðµ Ð¿Ñ€Ð¸Ð²ÐµÐ´ÐµÐ½Ñ‹ Ð´Ð²Ð° Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð¿Ð¾Ð¼Ð¾Ð³ÑƒÑ‚ Ð²Ð°Ð¼ Ð² ÑÑ‚Ð¾Ð¼.",
+                howToConnect: "ÐšÐ°Ðº Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ð¸Ñ‚ÑŒÑÑ?",
+                connectInfo: "Ð’Ð¾ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒÑÑ Ð¿Ð¾Ð´Ð¿Ð¸ÑÐºÐ¾Ð¹ Ð¼Ð¾Ð¶Ð½Ð¾ Ñ‡ÐµÑ€ÐµÐ· ÑÐ»ÐµÐ´ÑƒÑŽÑ‰ÐµÐµ Ð¼ÐµÐ½ÑŽ Ð´Ð»Ñ Ð½ÑƒÐ¶Ð½Ð¾Ð¹ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¾Ð½Ð½Ð¾Ð¹ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹",
+                macInfo: "ÐŸÑ€Ð¸Ð¼ÐµÑ‡Ð°Ð½Ð¸Ðµ: Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ð½Ð° Mac OS Ð°Ð½Ð°Ð»Ð¾Ð³Ð¸Ñ‡Ð½Ð¾ IOS",
+                generalAccess: "ÐžÐ±Ñ‰Ð¸Ð¹ Ð´Ð¾ÑÑ‚ÑƒÐ¿",
+                generalAccessInfo: "Ð’ ÑÑ‚Ð¾Ð¼ Ñ€Ð°Ð·Ð´ÐµÐ»Ðµ Ð²Ñ‹ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÑ‚Ðµ Ð´Ð¾ÑÑ‚ÑƒÐ¿ Ðº ÑÐ²Ð¾Ð¸Ð¼ ÐºÐ¾Ð½Ñ„Ð¸Ð³ÑƒÑ€Ð°Ñ†Ð¸ÑÐ¼ Ð¿Ð¾ Ð¾Ñ‚Ð´ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸, Ñ‡Ñ‚Ð¾ Ð¿Ð¾Ð·Ð²Ð¾Ð»ÑÐµÑ‚ Ð´ÐµÐ»Ð¸Ñ‚ÑŒÑÑ ÐºÐ°Ð¶Ð´Ð¾Ð¹ Ð¸Ð· Ð½Ð¸Ñ… Ñ Ð¿Ð¾Ð¼Ð¾Ñ‰ÑŒÑŽ QR-ÐºÐ¾Ð´Ð° Ð¸Ð»Ð¸ Ð¿Ñ€Ð¾ÑÑ‚Ð¾ ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ð¸Ñ….",
+                supTelInfo: "Ð•ÑÐ»Ð¸ Ð²Ð¾Ð·Ð½Ð¸ÐºÐ½ÑƒÑ‚ Ð¿Ñ€Ð¾Ð±Ð»ÐµÐ¼Ñ‹, Ð¾Ð±Ñ€Ð°Ñ‚Ð¸Ñ‚ÐµÑÑŒ Ð² ÑÐ»ÑƒÐ¶Ð±Ñƒ Ð¿Ð¾Ð´Ð´ÐµÑ€Ð¶ÐºÐ¸ Ð² Telegram"
             },
         };
         let settings = {
@@ -3983,12 +3983,12 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                             x-text="[status == 'active' ? $t('active') : status == 'limited' ? $t('limited') : status == 'expired' ? $t('expired') : $t('disabled')]"
                             :class="[status == 'active' ? 'bg-green-500' : status == 'limited' ? 'bg-red-600' : status == 'expired' ? 'bg-orange-600' : 'bg-gray-600']"></span>
                     </div>
-                    <div x-data="{ usedTraffic: {{ user.used_traffic }}, dataLimit: {% if not user.data_limit %}∞{% else %}{{ user.data_limit }}{% endif %} }"
+                    <div x-data="{ usedTraffic: {{ user.used_traffic }}, dataLimit: {% if not user.data_limit %}âˆž{% else %}{{ user.data_limit }}{% endif %} }"
                         class="basis-2/3 flex flex-row items-center sm:ltr:pl-9 sm:rtl:pr-9">
                         <div class="data-usage w-full">
                             <div class="dark:text-white text-black text-center mb-2"><span class="font-bold"
                                     x-text="$t('dataUsage')"></span><span dir="ltr">{{ user.used_traffic | bytesformat
-                                    }} / {% if not user.data_limit %}∞{% else %}{{ user.data_limit | bytesformat }}{%
+                                    }} / {% if not user.data_limit %}âˆž{% else %}{{ user.data_limit | bytesformat }}{%
                                     endif %}</span>
                             </div>
                             <div class="dark:text-white text-black mt-4 text-center"><span class="font-bold"
@@ -4000,7 +4000,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                                 x-text="resetInterval == 'year' ? $t('resetIntervalYear') : resetInterval == 'month' ? $t('resetIntervalMonth') : resetInterval == 'week' ? $t('resetIntervalWeek') : resetInterval == 'day' ? $t('resetIntervalDay') : ''">
                             </div>
                             <div class="dark:text-white text-black mt-5 text-center"><span class="font-bold"
-                                    x-text="$t('remainingDays')"></span><span>{% if not user.expire %}∞{% else %}{% set
+                                    x-text="$t('remainingDays')"></span><span>{% if not user.expire %}âˆž{% else %}{% set
                                     remaining_days = ((user.expire - now().timestamp()) // (24 * 3600)) %}({{
                                     remaining_days | int if (remaining_days | int) > -1 else 0 }}){% endif
                                     %}</span><span x-text="$t('remainingDaysSufix')"></span></div>
@@ -6144,12 +6144,12 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                                                                         </lord-icon>
                                                                         <h3 x-text="$t('addConfigs')"
                                                                             class="text-xl font-black leading-none tracking-tight text-white md:text-2xl">
-                                                                            افزودن کانفیگ ها</h3>
+                                                                            Ø§ÙØ²ÙˆØ¯Ù† Ú©Ø§Ù†ÙÛŒÚ¯ Ù‡Ø§</h3>
                                                                     </div>
                                                                     <p x-text="$t('clickForAdd')"
                                                                         class="text-sm mb-4 font-normal text-white lg:text-base">
-                                                                        برای اضافه کردن کانفیگ‌ ها داخل برنامه روی لینک
-                                                                        زیر کلیک کنید.</p>
+                                                                        Ø¨Ø±Ø§ÛŒ Ø§Ø¶Ø§ÙÙ‡ Ú©Ø±Ø¯Ù† Ú©Ø§Ù†ÙÛŒÚ¯â€Œ Ù‡Ø§ Ø¯Ø§Ø®Ù„ Ø¨Ø±Ù†Ø§Ù…Ù‡ Ø±ÙˆÛŒ Ù„ÛŒÙ†Ú©
+                                                                        Ø²ÛŒØ± Ú©Ù„ÛŒÚ© Ú©Ù†ÛŒØ¯.</p>
                                                                     <a id="windows-clashverge" class=" flex mb-4 items-center gap-x-4 w-full
                                                                         bg-stone-800 shadow-md px-3 py-2 rounded-3xl
                                                                         justify-between">
@@ -6158,8 +6158,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                                                                             trigger="loop" delay="2000"
                                                                             colors="primary:#fff">
                                                                         </lord-icon>
-                                                                        <span x-text="$t('AddtoApp')">افزودن به
-                                                                            برنامه</span>
+                                                                        <span x-text="$t('AddtoApp')">Ø§ÙØ²ÙˆØ¯Ù† Ø¨Ù‡
+                                                                            Ø¨Ø±Ù†Ø§Ù…Ù‡</span>
                                                                         <lord-icon class="w-8 h-8"
                                                                             src="https://cdn.lordicon.com/mrdiiocb.json"
                                                                             trigger="loop" delay="2000"
@@ -6241,7 +6241,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     <p x-text="$t('supTelInfo')" class="text-lg font-normal mb-4 text-gray-300 lg:text-xl"></p>
                     <div class="flex flex-col gap-y-4">
                         <h2 class="font-bold text-white text-2xl mb-2" x-text="$t('sup')"></h2>
-                        <a href="https://t.me/EkoLing"
+                        <a href="https://t.me/yourID"
                             class="py-3 px-4 transition-all duration-200 inline-flex gap-x-3 justify-center text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-6 h-6 fill-white"
                                 viewBox="0 0 50 50">
@@ -6268,8 +6268,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                height:50px;" id="countries"
                             class="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-3.5 bg-gray-100 border-gray-200 placeholder-gray-800 text-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
                             <option value="en">English</option>
-                            <option value="fa">فارسی</option>
-                            <option value="ru">Русский</option>
                         </select>
                     </div>
                 </div>
