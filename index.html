@@ -7,7 +7,7 @@
     <title>{{ user.username }} - Sub Info</title>
     <style>
         .asli {
-            background: url('https://wallpapercave.com/wp/wc1709083.jpg') no-repeat;
+            background: url('https://4kwallpapers.com/images/walls/thumbs_3t/11574.jpeg') no-repeat;
             background-position: center;
             background-size: cover;
         }
@@ -3615,7 +3615,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 tutorial: "Tutorial",
                 download: "Download",
                 telchannel: "Telegram Channel",
-                telsupport: "Costumer Service",
+                telsupport: "Telegram Support",
                 telProxy: "Telegram Proxy",
                 v2rayNG: "Android - Download v2rayNG",
                 NekoBox: "Android - Download NekoBox",
@@ -3638,7 +3638,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 addClashVerge: "Clash Verge",
                 addClashX: "Clash X",
                 install: "Click on the download link to download the program for your operating system!",
-                support: "Whatsapp",
+                support: "Support",
                 oneClick: "To use Config, just click on the program you are using!",
                 restofusage: "Data Usage",
                 needediOS: "iOS Version Needed: ",
@@ -3665,8 +3665,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 connectInfo: "You can use your subscription through the following menu for your desired operating system.",
                 macInfo: "Note: subscription setup on Mac is the same as iOS.",
                 generalAccess: "General Access",
-                generalAccessInfo: "Di bagian ini, Anda memiliki akses ke konfigurasi Anda secara terpisah yang memungkinkan Anda membagikan masing-masing konfigurasi melalui Kode QR atau Anda cukup menyalinnya.",
-                supTelInfo: "If there are any problems with subscription, please contact support on Whatsapp."
+                generalAccessInfo: "In this section, you have access to your configs separately which allows you to share each of them through QR Code or you can simply copy them.",
+                supTelInfo: "If there are any problems with subscription, please contact support on Telegram."
             },
             fa: {
                 active: "فعال",
@@ -3834,11 +3834,11 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
             },
         };
         let settings = {
-            language: "en",
+            language: "fa",
         };
 
         function checkLang() {
-            window.AlpineI18n.fallbackLocale = "en";
+            window.AlpineI18n.fallbackLocale = "fa";
             let locale = localStorage.getItem("lang") ?? settings.language;
             window.AlpineI18n.create(locale, langJson);
             AlpineI18n.locale = locale;
@@ -6241,7 +6241,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     <p x-text="$t('supTelInfo')" class="text-lg font-normal mb-4 text-gray-300 lg:text-xl"></p>
                     <div class="flex flex-col gap-y-4">
                         <h2 class="font-bold text-white text-2xl mb-2" x-text="$t('sup')"></h2>
-                        <a href="http://wa.me/6281375797442"
+                        <a href="https://t.me/EkoLing"
                             class="py-3 px-4 transition-all duration-200 inline-flex gap-x-3 justify-center text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-6 h-6 fill-white"
                                 viewBox="0 0 50 50">
@@ -6268,6 +6268,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                height:50px;" id="countries"
                             class="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-3.5 bg-gray-100 border-gray-200 placeholder-gray-800 text-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
                             <option value="en">English</option>
+                            <option value="fa">فارسی</option>
+                            <option value="ru">Русский</option>
                         </select>
                     </div>
                 </div>
